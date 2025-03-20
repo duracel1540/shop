@@ -72,6 +72,16 @@
                     >
                         MyView
                     </v-list-item>
+                    <v-list-item
+                        class="px-2"
+                        key="myViews"
+                        to="/dashboardServices/myViews"
+                        @click="changeUrl()"
+                        color="primary"
+                        style="font-weight:700;"
+                    >
+                        MyView
+                    </v-list-item>
                 </v-list>
             </v-navigation-drawer>
         </div>
@@ -146,6 +156,13 @@ export default {
                 description: 'delivery을 관리하는 화면입니다.', 
                 key: 'deliveries', 
                 route: '/supportServices/deliveries',
+                ImageUrl: '',
+            },
+            { 
+                title: 'MyView', 
+                description: 'MyView을 관리하는 화면입니다.', 
+                key: 'myViews', 
+                route: '/dashboardServices/myViews',
                 ImageUrl: '',
             },
             { 

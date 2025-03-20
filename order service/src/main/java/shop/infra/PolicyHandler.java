@@ -37,35 +37,5 @@ public class PolicyHandler {
         // Sample Logic //
 
     }
-
-    @StreamListener(
-        value = KafkaProcessor.INPUT,
-        condition = "headers['type']=='RetrieveStarted'"
-    )
-    public void wheneverRetrieveStarted_UpdateOrderStatus(
-        @Payload RetrieveStarted retrieveStarted
-    ) {
-        RetrieveStarted event = retrieveStarted;
-        System.out.println(
-            "\n\n##### listener UpdateOrderStatus : " + retrieveStarted + "\n\n"
-        );
-        // Sample Logic //
-
-    }
-
-    @StreamListener(
-        value = KafkaProcessor.INPUT,
-        condition = "headers['type']=='DeliveryStarted'"
-    )
-    public void wheneverDeliveryStarted_UpdateOrderStatus(
-        @Payload DeliveryStarted deliveryStarted
-    ) {
-        DeliveryStarted event = deliveryStarted;
-        System.out.println(
-            "\n\n##### listener UpdateOrderStatus : " + deliveryStarted + "\n\n"
-        );
-        // Sample Logic //
-
-    }
 }
 //>>> Clean Arch / Inbound Adaptor

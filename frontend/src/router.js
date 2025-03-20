@@ -16,6 +16,8 @@ import SupportServiceDeliveryDetail from "./components/listers/SupportServiceDel
 
 import MyViewView from "./components/MyViewView"
 import MyViewViewDetail from "./components/MyViewViewDetail"
+import MyViewView from "./components/MyViewView"
+import MyViewViewDetail from "./components/MyViewViewDetail"
 
 export default new Router({
     // mode: 'history',
@@ -54,6 +56,16 @@ export default new Router({
             },
 
 
+            {
+                path: '/dashboardServices/myViews',
+                name: 'MyViewView',
+                component: MyViewView
+            },
+            {
+                path: '/dashboardServices/myViews/:id',
+                name: 'MyViewViewDetail',
+                component: MyViewViewDetail
+            },
             {
                 path: '/dashboardServices/myViews',
                 name: 'MyViewView',
